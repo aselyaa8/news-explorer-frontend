@@ -1,0 +1,38 @@
+.main {
+    color: #FFFFFF;
+}
+
+.search-results {
+    min-height: 974px;
+    background: #F5F6F7;
+    padding: 80px 104px 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-results__title {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 46px;
+    color: #1A1B22;
+}
+
+.search-results__button {
+    background: #E8E8E8;
+    border-radius: 80px;
+    width: 288px;
+    height: 64px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1A1B22;
+    border:0px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}

@@ -1,0 +1,78 @@
+.news-card {
+    width: 400px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 3px 58px rgb(8 29 45 / 0.1);
+    cursor: pointer;
+}
+
+.news-card__img {
+    width: 400px;
+    height: 272px;
+    overflow: hidden;
+}
+
+.news-card__date {
+    color: #B6BCBF;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 20px 24px 0;
+}
+
+.news-card__title {
+    color: #1A1B22;
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    margin: 12px 24px 0;
+}
+
+.news-card__text {
+    color: #1A1B22;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    margin: 16px 24px 0;
+}
+
+.news-card__source {
+    color: #B6BCBF;
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    margin: 18px 24px 0px;
+    padding-bottom: 24px;
+}
+
+.news-card__button-save {
+    width: 40px;
+    height: 40px;
+    background-image: url('../../images/icon/Rectangle\ 8.svg');
+    background-size: 14px 19px;
+    background-color: #FFFFFF;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    border: 0px;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+}
