@@ -59,16 +59,26 @@
 
 @media screen and (max-width: 800px) {
     .navigation {
+        min-height: 66px;
         padding-right: 40px;
         padding-left: 40px;
     }
     .navigation__link {
         font-size: 16px;
+        padding-bottom: 21px;
     }
     .navigation__button {
         font-size: 16px;
         width: 152px;
         height: 40px;
     }
+}
+
+@media screen and (max-width: 720px) {
+ 
+}
+
+@media screen and (max-width: 375px) {
+  
 }
 

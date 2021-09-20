@@ -3,6 +3,29 @@
     margin-bottom: 64px;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(272px, 1fr));
+    grid-template-columns: 32% 32% 32%;
     grid-gap: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+ 
+}
+
+@media screen and (max-width: 800px) {
+  
+}
+
+
+@media screen and (max-width: 720px) {
+ .news-card-list{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 58px;
+ }
+}
+
+@media screen and (max-width: 375px) {
+  
 }
