@@ -3,6 +3,7 @@ import './Header.css';
 import Navigation from '../Navigation/Navigation';
 import img from '../../images/img.jpg';
 import SearchForm from '../SearchForm/SearchForm';
+import Preloader from '../Preloader/Preloader';
 
 function Header() {
     return (
@@ -10,6 +11,7 @@ function Header() {
              
              <Navigation />
              <SearchForm/>
+             
          {/* <img src={img} alt="Around U.S." className="header__img" /> */}
          
        </header>

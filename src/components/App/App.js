@@ -5,6 +5,9 @@ import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
 import PopupWithForm from '../PopupWothForm/PopupWithForm';
 import SignInPopup from '../SignInPopup/SignInPopup';
+import SignUpPopup from '../SignUpPopup/SignUpPopup';
+
+import {withRouter, Switch, Route} from "react-router-dom";
 // import Footer from '../Footer/Footer';
 // import About from '../About/About';
 // import Main from '../Main/Main';
@@ -17,13 +20,28 @@ import SignInPopup from '../SignInPopup/SignInPopup';
 function App() {
   
   return (
-    <div className='page'>
-      <Header/>
-      <Main/>
-     <Footer/>
-     <SignInPopup/>
-    </div>
+    
+      <div className='page'>
+        <Header/>
+        <Switch>
+          
+          <Route path="/signup">
+            <SignUpPopup />
+          </Route>
+          <Route path="/signin">
+            <SignInPopup />
+          </Route>
+          <Route path="/saved-news">
+          {/* TODO: Add Saved News component. */}
+          </Route>
+          <Route path="/">
+            <Main/>
+          </Route>
+        </Switch>
+        <Footer/>
+      </div>
+    
   );
 }
 
-export default App;
+export default withRouter(App);

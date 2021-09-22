@@ -1,18 +1,41 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './Navigation.css';
 import { Link } from 'react-router-dom';
 function Navigation() {
-  
+  const [burgerButton, setBurgerButton] = useState(true);
+  const [burgerClick, setBurgerClick] = useState(false);
+
+  const handleBurgerClick = () => setBurgerClick(!burgerClick);
+  const showBurgerButton = () => {
+    if (window.innerWidth > 720) {
+      setBurgerButton(false);
+    } else {
+      setBurgerButton(true);
+    }
+  };
+
+  useEffect(() => {
+    showBurgerButton();
+  }, []);
+
+  window.addEventListener('resize', showBurgerButton);
     return (
-      <nav className="navigation">
+      <nav className={burgerClick ? "navigation navigation_open" : "navigation"}>
           <div className="navigation__column-1"> 
-          <Link className="navigation__logo" to='/' >NewsExplorer</Link>
+              <Link className="navigation__logo" to='/' >NewsExplorer</Link>
           </div>
-          <div className="navigation__column-2">
-          <Link className="navigation__link" to='/' >Home </Link>
+          {!burgerButton &&<div className="navigation__column-2">
+             <Link className="navigation__link" to='/' >Home </Link>
              <button className="navigation__button">Sign in</button>
-          </div>
+          </div> }
+
+          {(burgerButton && burgerClick) && 
+            <div className="navigation__column-2_mobile">
+              <Link className="navigation__link" to='/' >Home </Link>
+              <button className="navigation__button">Sign in</button>
+            </div>}
           
+          {burgerButton && <button aria-label="Menu" type="button" className="navigation__burger-button" onClick={handleBurgerClick}></button>}
       </nav>
     );
   }
