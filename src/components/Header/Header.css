@@ -1,6 +1,6 @@
 .header {
     min-height: 576px;
-    background-image: url(../../images/georgia-de-lotz--UsJoNxLaNo-unsplash.png);
+    background-image: url(../../images/header-image.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
@@ -8,20 +8,10 @@
     flex-direction: column;
 }
 
+@media screen and (max-width: 1024px) {}
 
-@media screen and (max-width: 1024px) {
- 
-}
+@media screen and (max-width: 800px) {}
 
-@media screen and (max-width: 800px) {
-  
-}
+@media screen and (max-width: 720px) {}
 
-
-@media screen and (max-width: 720px) {
- 
-}
-
-@media screen and (max-width: 375px) {
-  
-}
+@media screen and (max-width: 375px) {}

@@ -50,8 +50,12 @@
     font-size: 16px;
     line-height: 22px;
     border: 0px;
-    color: #B6BCBF;
     padding-left: 24px;
+    color: #1A1B22
+}
+
+.search-form__input::placeholder {
+    color: #B6BCBF;
 }
 
 .search-form__button {
@@ -71,6 +75,16 @@
     color: #FFFFFF;
     padding: 0px;
     margin: 0px;
+    cursor: pointer;
+    transition: background 0.3s ease-in;
+    -webkit-transition: background 0.3s ease-in;
+    -moz-transition: background 0.3s ease-in;
+    -ms-transition: background 0.3s ease-in;
+    -o-transition: background 0.3s ease-in;
+}
+
+.search-form__button:hover {
+    background: #347EFF;
 }
 
 @media screen and (max-width: 800px) {

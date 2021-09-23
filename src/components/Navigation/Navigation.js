@@ -20,7 +20,7 @@ function Navigation() {
 
   window.addEventListener('resize', showBurgerButton);
     return (
-      <nav className={burgerClick ? "navigation navigation_open" : "navigation"}>
+      <nav className={(burgerButton && burgerClick) ? "navigation navigation_open" : "navigation"}>
           <div className="navigation__column-1"> 
               <Link className="navigation__logo" to='/' >NewsExplorer</Link>
           </div>
@@ -31,11 +31,11 @@ function Navigation() {
 
           {(burgerButton && burgerClick) && 
             <div className="navigation__column-2_mobile">
-              <Link className="navigation__link" to='/' >Home </Link>
-              <button className="navigation__button">Sign in</button>
+              <Link className="navigation__link navigation__link_mobile" to='/' >Home </Link>
+              <button className="navigation__button navigation__button_mobile">Sign in</button>
             </div>}
           
-          {burgerButton && <button aria-label="Menu" type="button" className="navigation__burger-button" onClick={handleBurgerClick}></button>}
+          {burgerButton && <button aria-label="Menu" type="button" className={burgerClick ? "navigation__close-button" : "navigation__burger-button"} onClick={handleBurgerClick}></button>}
       </nav>
     );
   }

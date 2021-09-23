@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css';
-import github from '../../images/icon/icon/github.png';
-import fb from '../../images/icon/social/fb.png'
+import github from '../../images/github.png';
+import fb from '../../images/fb.png'
 function Footer() {
     return (
          <footer className="footer">
