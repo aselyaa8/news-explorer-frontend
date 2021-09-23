@@ -3,6 +3,7 @@
     display: flex;
     background: rgba(196, 196, 196, 0.01);
     box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+    /* box-shadow: inset 0px -1px 0px; */
     align-items: center;
     padding-left: 104px;
     padding-right: 104px;
@@ -17,6 +18,14 @@
     position: relative;
 }
 
+.white {
+    background: white;
+}
+
+.navigation_line {
+    box-shadow: inset 0px -1px 0px #D1D2D6;
+}
+
 .navigation__link {
     text-decoration: none;
     font-family: Roboto;
@@ -24,12 +33,17 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 24px;
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
+    color: inherit;
     margin-right: 34px;
-    padding-bottom: 26px;
+    padding-bottom: 27px;
     padding-left: 9.5px;
     padding-right: 9.5px;
-    border-bottom: solid 3px white;
+}
+
+.underlined {
+    border-bottom: solid 3px;
+    border-bottom-color: inherit;
 }
 
 .navigation__logo {
@@ -39,15 +53,18 @@
     font-weight: bold;
     font-size: 20px;
     line-height: 24px;
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
+    color: inherit;
 }
 
 .navigation__button {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-color: transparent;
-    border: 1px solid #FFFFFF;
-    color: #FFFFFF;
+    border: 1px solid;
+    border-color: inherit;
+    /* color: #FFFFFF; */
+    color: inherit;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -59,6 +76,32 @@
     height: 48px;
     cursor: pointer;
 }
+
+.navigation__logout-button {
+    background-image: url('../../images/logout.svg');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-color: transparent;
+    border: 1px solid;
+    border-color: inherit;
+    /* color: #FFFFFF; */
+    color: inherit;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 100px;
+    cursor: pointer;
+    width: 112px;
+    height: 48px;
+}
+
+.navigation__logout-image {}
 
 .navigation__burger-button {
     background: url('../../images/burger-button.svg');
@@ -84,16 +127,38 @@
     transition: opacity 0.3s ease-in;
 }
 
+.navigation__burger-button_black {
+    background: url('../../images/burger-button-black.svg');
+}
+
+.navigation__close-button_black {
+    background: url('../../images/close-button-black.svg');
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: center;
+    border: 0;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in;
+}
+
 .navigation__column-1 {}
 
 .navigation__column-2 {}
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
     .navigation {
         min-height: 66px;
         padding-right: 40px;
         padding-left: 40px;
     }
+    .navigation__link {
+        padding-bottom: 21px;
+    }
+}
+
+@media screen and (max-width: 800px) {
     .navigation__link {
         font-size: 16px;
         padding-bottom: 21px;
@@ -112,6 +177,9 @@
         width: 100%;
         background: #1A1B22;
         height: 174px;
+    }
+    .white {
+        background: white;
     }
     .navigation__link_mobile {
         margin: 0;
@@ -140,6 +208,11 @@
     }
 }
 
-@media screen and (max-width: 720px) {}
+@media screen and (max-width: 650px) {
+    .navigation {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
 
 @media screen and (max-width: 375px) {}

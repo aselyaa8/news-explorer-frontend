@@ -86,6 +86,52 @@
     background-image: url("../../images/button-save-hover.svg");
 }
 
+.news-card__button-delete {
+    width: 40px;
+    height: 40px;
+    background-image: url("../../images/button-delete.svg");
+    /* background-size: 24px 24px; */
+    padding: 0;
+    background-color: #FFFFFF;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    border: 0px;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+    transition: background-image 0.3s ease-in;
+    -webkit-transition: background-image 0.3s ease-in;
+    -moz-transition: background-image 0.3s ease-in;
+    -ms-transition: background-image 0.3s ease-in;
+    -o-transition: background-image 0.3s ease-in;
+}
+
+.news-card__button-delete:hover {
+    background-image: url("../../images/button-delete-hover.svg");
+}
+
+.news-card__group {
+    margin: 0;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    position: absolute;
+    left: 24px;
+    top: 24px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
 @media screen and (max-width: 1024px) {
     .news-card {
         height: 420px;
@@ -118,6 +164,21 @@
     .news-card__source {
         margin-top: 12px;
     }
+    .news-card__text {
+        margin-top: 10px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        /* number of lines to show */
+        -webkit-box-orient: vertical;
+    }
+    .news-card__title {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        /* number of lines to show */
+        -webkit-box-orient: vertical;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -130,6 +191,9 @@
     .news-card__button-save {
         top: 8px;
         right: 8px
+    }
+    .news-card__img {
+        height: 196px;
     }
 }
 

@@ -8,6 +8,9 @@ import SignInPopup from '../SignInPopup/SignInPopup';
 import SignUpPopup from '../SignUpPopup/SignUpPopup';
 
 import {withRouter, Switch, Route} from "react-router-dom";
+import SavedNews from '../SavedNews/SavedNews';
+import Navigation from '../Navigation/Navigation';
+import SavedNewsHeader from '../SavedNewsHeader/SavedNewsHeader';
 // import Footer from '../Footer/Footer';
 // import About from '../About/About';
 // import Main from '../Main/Main';
@@ -22,9 +25,7 @@ function App() {
   return (
     
       <div className='page'>
-        <Header/>
         <Switch>
-          
           <Route path="/signup">
             <SignUpPopup />
           </Route>
@@ -32,9 +33,11 @@ function App() {
             <SignInPopup />
           </Route>
           <Route path="/saved-news">
-          {/* TODO: Add Saved News component. */}
+            <SavedNewsHeader/>
+            <SavedNews/>
           </Route>
           <Route path="/">
+            <Header/>
             <Main/>
           </Route>
         </Switch>

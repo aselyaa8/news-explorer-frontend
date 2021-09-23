@@ -1,0 +1,29 @@
+.saved-news {
+    padding-left: 104px;
+    padding-right: 104px;
+    padding-top: 62px;
+    padding-bottom: 62px;
+    background: #F5F6F7;
+}
+
+@media screen and (max-width: 1024px) {
+    .saved-news {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .saved-news {
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 720px) {}
+
+@media screen and (max-width: 375px) {}
