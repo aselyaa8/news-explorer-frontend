@@ -4,7 +4,7 @@ import img from '../../images/img.jpg'
 
 function NewsCard(props) {
     return (
-    <section className="news-card">
+    <div className="news-card">
          <img src={img} alt="blblb" className="news-card__img" />
          <p className="news-card__date">November 4, 2020</p>
          <h2 className="news-card__title">Everyone Needs a Special 'Sit Spot' in Nature</h2>
@@ -12,7 +12,7 @@ function NewsCard(props) {
          <p className="news-card__source">treehugger</p>
          {props.children}
          
-    </section>
+    </div>
     );
 }
 

@@ -1,9 +1,10 @@
 .header {
     min-height: 576px;
-    background-image: url(../../images/header-image.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.6)), url(../../images/header-background-img.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
+    background-position-y: center;
     display: flex;
     flex-direction: column;
     color: #FFFFFF;

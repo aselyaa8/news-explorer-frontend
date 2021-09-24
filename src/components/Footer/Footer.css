@@ -30,6 +30,11 @@
 
 .footer__nav-list-item {
     margin-right: 40px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
 }
 
 .footer__social-list {

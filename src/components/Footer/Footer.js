@@ -12,11 +12,10 @@ function Footer() {
                 <li className= "footer__nav-list-item">Practicum By Yandex</li>
             </ul>
             <ul className= "footer__social-list">
-                <li className="footer__social-list-item"><img alt ="icon " src = {github}/></li>
-                <li className="footer__social-list-item"><img  alt ="icon " src = {fb} /></li>
+                <li className="footer__social-list-item"><a href="https://github.com/aselyaa8"><img alt ="github icon" src = {github}/></a></li>
+                <li className="footer__social-list-item"><a href="https://www.facebook.com/profile.php?id=100004822028587"><img  alt ="facebook icon" src = {fb} /></a></li>
             </ul>
             </div>
-            
        </footer>
     );
 }
