@@ -15,19 +15,13 @@ function Main() {
             <h2 className="search-results__title">Search results</h2>
             <NewsCardList>
                 <li className="news-card-list__item">
-                <NewsCard>
-                    <button className="news-card__button-save"></button>
-                </NewsCard>
+                    <NewsCard/>
                 </li>
                 <li className="news-card-list__item">
-                <NewsCard>
-                    <button className="news-card__button-save"></button>
-                </NewsCard>
+                    <NewsCard/>
                 </li>
                 <li className="news-card-list__item">
-                <NewsCard>
-                    <button className="news-card__button-save"></button>
-                </NewsCard>
+                    <NewsCard/>
                 </li>
             </NewsCardList>
             <button className="search-results__button">Show more </button>

@@ -5,7 +5,7 @@ import img from '../../images/img.jpg';
 function About() {
     return (
     <section className="about">
-         <img src={img} alt="blblb" className="about__img" />
+         <img src={img} alt="phone" className="about__img" />
          <div className="about__content">
          <h2 className="about__title">About the author</h2>
          <p className="about__text">

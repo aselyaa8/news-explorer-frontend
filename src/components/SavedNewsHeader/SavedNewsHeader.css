@@ -15,7 +15,7 @@
 }
 
 .saved-news-header__paragraph {
-    font-family: Roboto;
+    font-family: Roboto, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -28,7 +28,7 @@
     margin: 0;
     margin-top: 28px;
     margin-bottom: 30px;
-    font-family: Roboto Slab;
+    font-family: Roboto Slab, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 40px;
@@ -38,7 +38,7 @@
 
 .saved-news-header__subtitle {
     margin: 0;
-    font-family: Roboto;
+    font-family: Roboto, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;

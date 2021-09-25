@@ -21,7 +21,7 @@
 
 .news-card__date {
     color: #B6BCBF;
-    font-family: Source Sans Pro;
+    font-family: Source Sans Pro, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -31,7 +31,7 @@
 
 .news-card__title {
     color: #1A1B22;
-    font-family: Roboto Slab;
+    font-family: Roboto Slab, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 26px;
@@ -41,7 +41,7 @@
 
 .news-card__text {
     color: #1A1B22;
-    font-family: Roboto;
+    font-family: Roboto, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -51,7 +51,7 @@
 
 .news-card__source {
     color: #B6BCBF;
-    font-family: Roboto Slab;
+    font-family: Roboto Slab, Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
@@ -81,6 +81,26 @@
     -moz-transition: background-image 0.3s ease-in;
     -ms-transition: background-image 0.3s ease-in;
     -o-transition: background-image 0.3s ease-in;
+}
+
+.news-card__hover-text {
+    font-family: Roboto, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    min-width: 182px;
+    height: 40px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 24px;
+    right: 69px;
 }
 
 .news-card__button-save:hover {
@@ -122,7 +142,7 @@
     position: absolute;
     left: 24px;
     top: 24px;
-    font-family: Roboto;
+    font-family: Roboto, Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -160,7 +180,11 @@
     }
     .news-card__button-save {
         top: 16px;
-        right: 16px
+        right: 16px;
+    }
+    .news-card__hover-text {
+        top: 16px;
+        width: 100px;
     }
     .news-card__source {
         margin-top: 24px;

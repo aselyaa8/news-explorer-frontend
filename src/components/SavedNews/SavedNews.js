@@ -15,19 +15,16 @@ function SavedNews() {
                 <li className="news-card-list__item">
                 <NewsCard>
                      <p className="news-card__group">Nature</p>
-                    <button className="news-card__button-delete"></button>
                 </NewsCard>
                 </li>
                 <li className="news-card-list__item">
                 <NewsCard>
                      <p className="news-card__group">Nature</p>
-                    <button className="news-card__button-delete"></button>
                 </NewsCard>
                 </li>
                 <li className="news-card-list__item">
                 <NewsCard>
                      <p className="news-card__group">Nature</p>
-                    <button className="news-card__button-delete"></button>
                 </NewsCard>
                 </li>
                  

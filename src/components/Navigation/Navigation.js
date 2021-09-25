@@ -35,17 +35,17 @@ function Navigation() {
   window.addEventListener('resize', showBurgerButton);
     return (
       <nav className={(isBurgerButtonActive && burgerClick) ? `navigation navigation_open ${isSavedNewsPath ? 'white navigation_line' : null}` : "navigation"}>
-          <div className="navigation__column-1"> 
+          <div className="navigation__column-logo"> 
               <Link className="navigation__logo" to='/' >NewsExplorer</Link>
           </div>
-          {!isBurgerButtonActive  &&<div className="navigation__column-2">
+          {!isBurgerButtonActive  &&<div className="navigation__column-links">
              <Link className={!isSavedNewsPath ? "navigation__link underlined" : "navigation__link"} to='/' >Home </Link>
              {isSavedNewsPath && <Link className="navigation__link underlined" to='/saved-news' >Saved articles </Link>}
              {navigationButton}
           </div> }
 
           {(isBurgerButtonActive && burgerClick) && 
-            <div className={`navigation__column-2_mobile ${isSavedNewsPath ? 'white' : null}`}>
+            <div className={`navigation__column-links_mobile ${isSavedNewsPath ? 'white' : null}`}>
               <Link className="navigation__link navigation__link_mobile" to='/' >Home </Link>
               <button className="navigation__button navigation__button_mobile">Sign in</button>
             </div>}

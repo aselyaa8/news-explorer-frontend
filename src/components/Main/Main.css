@@ -11,7 +11,7 @@
 }
 
 .search-results__title {
-    font-family: Roboto Slab;
+    font-family: Roboto Slab, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 40px;
@@ -27,7 +27,7 @@
     border-radius: 80px;
     width: 288px;
     height: 64px;
-    font-family: Roboto;
+    font-family: Roboto, Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;

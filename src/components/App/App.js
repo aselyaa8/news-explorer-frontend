@@ -11,6 +11,7 @@ import {withRouter, Switch, Route} from "react-router-dom";
 import SavedNews from '../SavedNews/SavedNews';
 import Navigation from '../Navigation/Navigation';
 import SavedNewsHeader from '../SavedNewsHeader/SavedNewsHeader';
+import SuccessfullRegistrationPopup from '../SuccessfullRegistrationPopup/SuccessfullRegistrationPopup';
 // import Footer from '../Footer/Footer';
 // import About from '../About/About';
 // import Main from '../Main/Main';
@@ -28,6 +29,10 @@ function App() {
         <Switch>
           <Route path="/signup">
             <SignUpPopup />
+          </Route>
+          <Route path="/signin/success">
+            {/* for presentation purpose */}
+            <SuccessfullRegistrationPopup/>
           </Route>
           <Route path="/signin">
             <SignInPopup />

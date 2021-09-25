@@ -1,0 +1,9 @@
+.success-popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.success-popup__heading {
+    margin-bottom: 14px;
+}
