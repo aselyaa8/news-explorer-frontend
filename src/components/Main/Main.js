@@ -5,6 +5,7 @@ import About from '../About/About'
 import Preloader from '../Preloader/Preloader';
 import NotFound from '../NotFound/NotFound';
 import NewsCard from '../NewsCard/NewsCard';
+import SignInPopup from '../SignInPopup/SignInPopup';
 
 function Main() {
     return (

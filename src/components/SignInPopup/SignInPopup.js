@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import PopupWithForm from '../PopupWothForm/PopupWithForm';
 
-function SignInPopup() {
+function SignInPopup(props) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -11,9 +11,9 @@ function SignInPopup() {
   function handlePasswordChange(e){
     setPassword(e.target.value)
   }
-  const footer = <p className="form__text"> or <a className="form__text-link" href="/signup">Sign up</a></p>;
+  const footer = <p className="form__text"> or <button className="form__text-link" onClick={props.onSignUpOpen}>Sign up</button></p>;
   return (
-    <PopupWithForm title="Sign In" footer={footer}>
+    <PopupWithForm title="Sign In" footer={footer} onClose={props.onClose}>
        <label className="form__label" for="email">Email</label>
        <input className="form__input" required id="email" name="email" type="email" placeholder="Enter email" value={email} onChange={handleEmailChange} />
        <span id="name-input-error" className="form__input-error"></span>
