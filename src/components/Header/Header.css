@@ -1,0 +1,19 @@
+.header {
+    min-height: 576px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.6)), url(../../images/header-background-img.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 800px) {}
+
+@media screen and (max-width: 720px) {}
+
+@media screen and (max-width: 375px) {}

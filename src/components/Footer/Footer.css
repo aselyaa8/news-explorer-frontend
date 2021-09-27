@@ -1,0 +1,109 @@
+.footer {
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 104px;
+    padding-left: 104px;
+}
+
+.footer__copyright {
+    font-family: Roboto, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #B6BCBF;
+}
+
+.footer__lists {
+    display: flex;
+}
+
+.footer__nav-list {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.footer__nav-list-item {
+    margin-right: 40px;
+    font-family: Roboto, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.footer__social-list {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.footer__social-list-item {
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.footer__social-list-item:last-child {
+    margin-right: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        padding-right: 40px;
+        padding-left: 40px;
+        min-height: 64px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .footer {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    .footer__nav-list-item {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .footer {
+        flex-direction: column-reverse;
+        min-height: 176px;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+        margin-top: 20px
+    }
+    .footer__lists {
+        margin-left: 16px;
+        align-self: flex-start;
+    }
+    .footer__nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 24px;
+    }
+    .footer__nav-list-item {
+        line-height: 24px;
+        margin-bottom: 24px;
+    }
+    .footer__social-list {
+        align-items: flex-start;
+        text-align: right;
+    }
+    .footer__copyright {
+        margin-top: 14px;
+        margin-bottom: 22px;
+    }
+}
+
+@media screen and (max-width: 375px) {}
