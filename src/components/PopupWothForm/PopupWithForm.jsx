@@ -1,7 +1,14 @@
 import React from 'react';
 import './PopupWithForm.css'
 
-function PopupWithForm(props) { 
+PopupWithForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
+  children: PropTypes.any,
+  footer: PropTypes.element,
+}
+function PopupWithForm(props) {
   return (
     <div className="popup">
       <div className="popup__container">
@@ -12,7 +19,7 @@ function PopupWithForm(props) {
           {props.footer}
         </form>
         <button aria-label="Close" type="button" className="popup__close-button" onClick={props.onClose}></button>
-        
+
       </div>
     </div>
   );

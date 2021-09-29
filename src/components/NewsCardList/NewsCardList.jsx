@@ -1,14 +1,16 @@
 import React from 'react';
 import './NewsCardList.css';
-import NewsCard from '../NewsCard/NewsCard';
 
+NewsCardList.propTypes = {
+  children: PropTypes.any
+};
 
 function NewsCardList(props) {
-    return (
+  return (
     <ul className="news-card-list">
-        {props.children}
+      {props.children}
     </ul>
-    );
+  );
 }
 
 export default NewsCardList;

@@ -101,8 +101,6 @@
     height: 48px;
 }
 
-.navigation__logout-image {}
-
 .navigation__burger-button {
     background: url('../../images/burger-button.svg');
     width: 16px;
@@ -142,10 +140,6 @@
     cursor: pointer;
     transition: opacity 0.3s ease-in;
 }
-
-.navigation__column-logo {}
-
-.navigation__column-links {}
 
 @media screen and (max-width: 1024px) {
     .navigation {

@@ -8,10 +8,6 @@
     list-style-type: none;
 }
 
-.news-card-list__item {
-    /* max-width: 400px; */
-}
-
 @media screen and (max-width: 1024px) {}
 
 @media screen and (max-width: 800px) {
@@ -31,8 +27,4 @@
 }
 
 @media screen and (max-width: 375px) {
-    .news-card-list {
-        /* margin-left: auto;
-        margin-right: auto; */
-    }
 }
