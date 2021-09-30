@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import PopupWithForm from '../PopupWothForm/PopupWithForm';
+import PropTypes from 'prop-types';
 
 SignUpPopup.propTypes = {
   onSignInOpen: PropTypes.func.isRequired,
   onClose: PropTypes.func.isRequired,
+  handleRegister: PropTypes.func.isRequired
 }
 
 function SignUpPopup(props) {
@@ -20,10 +22,14 @@ function SignUpPopup(props) {
   function handleUsernameChange(e) {
     setUsername(e.target.value);
   }
+  function onSubmit(e) {
+    e.preventDefault();
+    props.handleRegister(email, password, username);
+  }
   const footer = <p className="form__text"> or
     <button type="button" className="form__text-link" onClick={props.onSignInOpen}>Sign in</button></p>;
   return (
-    <PopupWithForm title="Sign Up" footer={footer} onClose={props.onClose}>
+    <PopupWithForm title="Sign Up" footer={footer} onClose={props.onClose} onSubmit={onSubmit}>
       <label className="form__label" htmlFor="email">Email</label>
       <input className="form__input" required id="email" name="email" type="text" placeholder="Enter email" value={email} onChange={handleEmailChange} />
       <label className="form__label" htmlFor="password">Password</label>

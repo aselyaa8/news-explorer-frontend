@@ -4,8 +4,14 @@ import { Link, useLocation } from 'react-router-dom';
 import logout from '../../images/logout.svg';
 import SignInPopup from '../SignInPopup/SignInPopup';
 import SignUpPopup from '../SignUpPopup/SignUpPopup';
+import PropTypes from 'prop-types';
 
-function Navigation() {
+Navigation.propTypes = {
+  handleRegister: PropTypes.func.isRequired,
+  handleAuthorize: PropTypes.func.isRequired,
+}
+
+function Navigation(props) {
   const [isBurgerButtonActive, setIsBurgerButtonActive] = useState(true);
   const [burgerClick, setBurgerClick] = useState(false);
   const location = useLocation();
@@ -70,8 +76,8 @@ function Navigation() {
           <Link className="navigation__link navigation__link_mobile" to='/' >Home </Link>
           <button type="button" className="navigation__button navigation__button_mobile" onClick={handleSignIn}>Sign in</button>
         </div>}
-      {isSignInPopupOpen && <SignInPopup onClose={handlePopupOnClose} onSignUpOpen={handleSignUpOpen} />}
-      {isSignUpPopupOpen && <SignUpPopup onClose={handlePopupOnClose} onSignInOpen={handleSignIpOpen} />}
+      {isSignInPopupOpen && <SignInPopup handleAuthorize={props.handleAuthorize} onClose={handlePopupOnClose} onSignUpOpen={handleSignUpOpen} />}
+      {isSignUpPopupOpen && <SignUpPopup handleRegister={props.handleRegister} onClose={handlePopupOnClose} onSignInOpen={handleSignIpOpen} />}
       {isBurgerButtonActive && burgerButton}
     </nav>
   );

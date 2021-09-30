@@ -6,9 +6,10 @@ import Preloader from '../Preloader/Preloader';
 import NotFound from '../NotFound/NotFound';
 import NewsCard from '../NewsCard/NewsCard';
 import SignInPopup from '../SignInPopup/SignInPopup';
+import PropTypes from 'prop-types';
 
 Main.propTypes = {
-  cards: PropTypes.array.isRequired,
+  cards: PropTypes.array,
   isLoading: PropTypes.bool.isRequired
 };
 

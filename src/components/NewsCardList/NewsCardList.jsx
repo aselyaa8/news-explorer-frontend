@@ -1,5 +1,6 @@
 import React from 'react';
 import './NewsCardList.css';
+import PropTypes from 'prop-types';
 
 NewsCardList.propTypes = {
   children: PropTypes.any

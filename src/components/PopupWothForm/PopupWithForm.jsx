@@ -1,5 +1,6 @@
 import React from 'react';
 import './PopupWithForm.css'
+import PropTypes from 'prop-types';
 
 PopupWithForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,

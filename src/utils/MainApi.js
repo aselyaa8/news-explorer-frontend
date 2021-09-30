@@ -13,6 +13,42 @@ class Api {
     return Promise.reject(`Error: ${res.status}`);
   }
 
+  register(email, password, name) {
+    return fetch(`${this.baseUrl}/signup`, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email,
+        password,
+        name
+      })
+    }).then((response) => {
+      return response.json();
+    }).then((res) => {
+      return res;
+    }).catch((err) => console.log(err));
+  }
+
+  authorize(email, password){
+    return fetch(`${this.baseUrl}/signin`, {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ password, email })
+  }).then((response => response.json()))
+    .then((data) => {
+      if (data.token) {
+        localStorage.setItem('jwt', data.token);
+        return data;
+      }
+    }).catch(err => console.log(err))
+  }
+
   getSearchResults(query) {
     return fetch(`${this.baseUrl}/everything?${new URLSearchParams({
       q: query.text,
@@ -121,11 +157,12 @@ class Api {
   }
 }
 
-const newsApi = new Api({
-  baseUrl: 'https://newsapi.org/v2',
+const mainApi = new Api({
+  baseUrl: 'https://api.pinterest.students.nomoreparties.site',
+  // baseUrl: 'http://localhost:3001',
   headers: {
     'Content-Type': 'application/json',
   },
 });
 
-export default newsApi;
+export default mainApi;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './NewsCard.css';
 import { useLocation } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 NewsCard.propTypes = {
   card: PropTypes.object.isRequired,
@@ -11,7 +12,7 @@ function NewsCard(props) {
   const { card } = props;
   const location = useLocation();
   const mainPath = location.pathname === '/';
-  const [isHovered, setIsHovered] = useState(false)
+  const [isHovered, setIsHovered] = useState(false);
   const date = new Date(card.publishedAt);
   const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
     'July', 'August', 'September', 'October', 'November', 'December'];

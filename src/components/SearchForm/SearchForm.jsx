@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import './SearchForm.css';
+import PropTypes from 'prop-types';
 
 SearchForm.propTypes = {
   onSearchSubmit: PropTypes.func.isRequired,

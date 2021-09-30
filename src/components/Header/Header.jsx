@@ -5,17 +5,19 @@ import Navigation from '../Navigation/Navigation';
 
 import SearchForm from '../SearchForm/SearchForm';
 
-function Header({ onSearchSubmit }) {
+Header.propTypes = {
+  onSearchSubmit: PropTypes.func.isRequired,
+  handleRegister: PropTypes.func.isRequired,
+  handleAuthorize: PropTypes.func.isRequired,
+};
+
+function Header({ onSearchSubmit, handleRegister, handleAuthorize }) {
   return (
     <header className="header">
-      <Navigation />
+      <Navigation handleRegister={handleRegister} handleAuthorize={handleAuthorize} />
       <SearchForm onSearchSubmit={onSearchSubmit} />
     </header>
   );
 }
-
-Header.propTypes = {
-  onSearchSubmit: PropTypes.func.isRequired,
-};
 
 export default Header;
