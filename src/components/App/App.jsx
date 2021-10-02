@@ -15,6 +15,7 @@ import mainApi from '../../utils/MainApi';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import { LoggedInContext } from '../../context/LoggedInContext';
 
+
 function App() {
   const [currentUser, setCurrentUser] = useState({});
   const [isLoading, setIsLoading] = useState(false);
@@ -22,6 +23,7 @@ function App() {
   const [token, setToken] = useState(() => localStorage.getItem('jwt'));
   const [loggedIn, setLoggedIn] = useState(false);
   const [savedCards, setSavedCards] = useState([]);
+  const [showNewsApiError, setShowNewsApiError] = useState(false);
   const history = useHistory();
 
   useEffect(() => {
@@ -69,9 +71,11 @@ function App() {
     newsApi.getSearchResults(query).then((res) => {
       const articles = parseArticles(res.articles, query);
       setCards(articles);
+      setShowNewsApiError(false);
       localStorage.setItem('articles', JSON.stringify(articles));
     }).catch((err) => {
       console.log(err);
+      setShowNewsApiError(true);
     }).finally(() => {
       setIsLoading(false);
     });
@@ -180,7 +184,7 @@ function App() {
                 loggedIn={loggedIn}
                 handleSignOut={handleSignOut}
               />
-              <Main isLoading={isLoading} cards={cards} handleSaveCard={handleSaveCard} handleDeleteCard={handleDeleteCard} handleSignInOpen={handleSignInOpen} />
+              <Main isLoading={isLoading} cards={cards} handleSaveCard={handleSaveCard} handleDeleteCard={handleDeleteCard} handleSignInOpen={handleSignInOpen} showNewsApiError={showNewsApiError} />
               {showSignInPopup && <SignInPopup handleAuthorize={handleAuthorize} onClose={handlePopupOnClose} onSignUpOpen={handleSignUpOpen} />}
               {showSignUpPopup && <SignUpPopup handleRegister={handleRegister} onClose={handlePopupOnClose} onSignInOpen={handleSignInOpen} />}
               {showSuccessPopup && <SuccessfullRegistrationPopup onClose={handlePopupOnClose} onSignInOpen={handleSignInOpen} />}

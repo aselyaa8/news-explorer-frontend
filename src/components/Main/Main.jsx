@@ -6,13 +6,15 @@ import Preloader from '../Preloader/Preloader';
 import NotFound from '../NotFound/NotFound';
 import PropTypes from 'prop-types';
 import { MainNewsCard } from '../NewsCard/NewsCard';
+import ErrorNewsApi from '../ErrorNewsApi/ErrorNewsApi';
 
 Main.propTypes = {
   cards: PropTypes.array,
   isLoading: PropTypes.bool.isRequired,
   handleSaveCard: PropTypes.func.isRequired,
   handleDeleteCard: PropTypes.func.isRequired,
-  handleSignInOpen: PropTypes.func.isRequired
+  handleSignInOpen: PropTypes.func.isRequired,
+  showNewsApiError: PropTypes.bool.isRequired
 };
 
 function Main(props) {
@@ -30,6 +32,7 @@ function Main(props) {
     <main className="main">
       {props.isLoading && <Preloader />}
       {showNotFound && <NotFound />}
+      {props.showNewsApiError && <ErrorNewsApi />}
       {showResults && (props.cards) && <section className="search-results">
         <h2 className="search-results__title">Search results</h2>
         <NewsCardList>
