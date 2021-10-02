@@ -27,7 +27,7 @@ class Api {
 }
 
 const newsApi = new Api({
-  baseUrl: 'https://newsapi.org/v2',
+  baseUrl: 'https://nomoreparties.co/news/v2',
   headers: {
     'Content-Type': 'application/json',
   },

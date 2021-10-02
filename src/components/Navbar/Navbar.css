@@ -3,7 +3,6 @@
     display: flex;
     background: rgba(196, 196, 196, 0.01);
     box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
-    /* box-shadow: inset 0px -1px 0px; */
     align-items: center;
     padding-left: 104px;
     padding-right: 104px;
@@ -78,8 +77,8 @@
 }
 
 .navigation__logout-button {
-    background-image: url('../../images/logout.svg');
-    background-position: right;
+    background-image: url('../../images/logout-white.svg');
+    background-position: right 10px top 10px;
     background-repeat: no-repeat;
     background-size: 24px 24px;
     background-color: transparent;
@@ -97,10 +96,14 @@
     box-sizing: border-box;
     border-radius: 100px;
     cursor: pointer;
-    width: 112px;
+    min-width: 112px;
     height: 48px;
+    padding-right: 40px;
+    padding-left: 15px;
 }
-
+.navigation__logout-button_black{
+background-image: url('../../images/logout.svg');
+}
 .navigation__burger-button {
     background: url('../../images/burger-button.svg');
     width: 16px;
@@ -164,7 +167,8 @@
     }
     .navigation__column-links_mobile {
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column; */
+        flex-wrap: wrap;
         position: absolute;
         left: 0;
         bottom: -174px;
@@ -186,11 +190,26 @@
         border-bottom: 0;
         padding-left: 40px;
         margin-top: 16px;
+        width: 40vw;
+        /* width: 40vw;
+        display: flex; */
+    }
+    .navigation__link_mobile:nth-of-type(2){
+      text-align: right;
+    }
+
+    .navigation__column-links_mobile .navigation__logout-button{
+       text-align: right;
+       background-position: right 43vw top 17px;
+       padding-right: 48vw;
+       padding-left: 40px;
     }
     .navigation__button_mobile {
         margin-left: auto;
         margin-right: auto;
-        width: 288px;
+        width: 100vw;
+        margin-left: 16px;
+        margin-right: 16px;
         height: 56px;
         margin-top: 22px;
         margin-bottom: 24px;
@@ -206,6 +225,17 @@
     .navigation {
         padding-left: 16px;
         padding-right: 16px;
+    }
+    .navigation__column-links_mobile .navigation__logout-button{
+       text-align: right;
+       background-position: right 40vw top 17px;
+       padding-right: 50vw;
+       padding-left: 40px;
+    }
+    .navigation__link_mobile{
+      padding-left: 16px;
+      padding-right: 16px;
+      max-width: 40vw;
     }
 }
 

@@ -7,3 +7,8 @@
 .success-popup__heading {
     margin-bottom: 14px;
 }
+
+.success-popup__button{
+  text-align: left;
+  padding: 0;
+}

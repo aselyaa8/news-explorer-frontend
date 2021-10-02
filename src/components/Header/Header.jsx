@@ -1,20 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
 import PropTypes from 'prop-types';
-import Navigation from '../Navigation/Navigation';
+
 
 import SearchForm from '../SearchForm/SearchForm';
+import { DesktopNavbar, MobileNavbar } from '../Navbar/Navbar';
 
 Header.propTypes = {
   onSearchSubmit: PropTypes.func.isRequired,
-  handleRegister: PropTypes.func.isRequired,
-  handleAuthorize: PropTypes.func.isRequired,
+  handleSignInClick: PropTypes.func.isRequired,
+  loggedIn: PropTypes.bool.isRequired,
+  handleSignOut: PropTypes.func.isRequired,
 };
 
-function Header({ onSearchSubmit, handleRegister, handleAuthorize }) {
+function Header({ onSearchSubmit, handleSignInClick, handleSignOut }) {
+  const [desktop, setDesktop] = useState(window.innerWidth > 720);
+
+  const showDesktop = () => {
+    if (window.innerWidth > 720) {
+      setDesktop(true);
+    } else {
+      setDesktop(false);
+    }
+  };
+  window.addEventListener('resize', showDesktop);
   return (
     <header className="header">
-      <Navigation handleRegister={handleRegister} handleAuthorize={handleAuthorize} />
+      {desktop ? <DesktopNavbar
+        handleSignOut={handleSignOut}
+        handleSignInClick={handleSignInClick} />
+        :
+        <MobileNavbar handleSignOut={handleSignOut}
+        />}
       <SearchForm onSearchSubmit={onSearchSubmit} />
     </header>
   );

@@ -9,8 +9,8 @@ function Footer() {
       <p className="footer__copyright">&#169;2021 Supersite, Powered by News API</p>
       <div className="footer__lists">
         <ul className="footer__nav-list">
-          <li className="footer__nav-list-item">Home</li>
-          <li className="footer__nav-list-item">Practicum By Yandex</li>
+          <li><a href="/" className="footer__nav-list-item" >Home</a></li>
+          <li><a href="https://practicum.yandex.com" className="footer__nav-list-item">Practicum By Yandex</a></li>
         </ul>
         <ul className="footer__social-list">
           <li className="footer__social-list-item"><a href="https://github.com/aselyaa8"><img alt="github icon" src={github} /></a></li>

@@ -1,15 +1,17 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { LoggedInContext } from '../../context/LoggedInContext';
 
 ProtectedRoute.propTypes = {
   component: PropTypes.any,
-  loggedIn: PropTypes.bool.isRequired,
+  handleSignOut: PropTypes.func.isRequired,
 }
 function ProtectedRoute({ component: Component, ...props }) {
+  const loggedIn = React.useContext(LoggedInContext);
   return (
     <Route>
-      {() => props.loggedIn ? <Component {...props} /> : <Redirect to="/" />}
+      {() => loggedIn ? <Component {...props} /> : <Redirect to="/" />}
     </Route>
   )
 }

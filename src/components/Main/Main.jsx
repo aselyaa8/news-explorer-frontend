@@ -4,13 +4,15 @@ import './Main.css';
 import About from '../About/About'
 import Preloader from '../Preloader/Preloader';
 import NotFound from '../NotFound/NotFound';
-import NewsCard from '../NewsCard/NewsCard';
-import SignInPopup from '../SignInPopup/SignInPopup';
 import PropTypes from 'prop-types';
+import { MainNewsCard } from '../NewsCard/NewsCard';
 
 Main.propTypes = {
   cards: PropTypes.array,
-  isLoading: PropTypes.bool.isRequired
+  isLoading: PropTypes.bool.isRequired,
+  handleSaveCard: PropTypes.func.isRequired,
+  handleDeleteCard: PropTypes.func.isRequired,
+  handleSignInOpen: PropTypes.func.isRequired
 };
 
 function Main(props) {
@@ -24,7 +26,6 @@ function Main(props) {
 
   const showNotFound = cards && cards.length === 0;
   const showResults = cards && cards.length > 0;
-
   return (
     <main className="main">
       {props.isLoading && <Preloader />}
@@ -34,7 +35,7 @@ function Main(props) {
         <NewsCardList>
           {props.cards.slice(0, numberOfCards).map((card, i) => {
             return <li key={i} className="news-card-list__item">
-              <NewsCard card={card} />
+              <MainNewsCard card={card} handleSaveCard={props.handleSaveCard} handleDeleteCard={props.handleDeleteCard} handleSignInOpen={props.handleSignInOpen} />
             </li>
           })}
         </NewsCardList>
