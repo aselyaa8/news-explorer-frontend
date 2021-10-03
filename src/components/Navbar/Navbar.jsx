@@ -14,6 +14,7 @@ DesktopNavbar.propTypes = {
 export function DesktopNavbar(props) {
   const loggedIn = React.useContext(LoggedInContext);
   const currentUser = React.useContext(CurrentUserContext);
+  const location = useLocation();
   const isSavedNewsPath = location.pathname === '/saved-news';
   const isMainPath = !isSavedNewsPath;
   return (
