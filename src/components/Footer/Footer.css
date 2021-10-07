@@ -22,6 +22,7 @@
 
 .footer__nav-list {
     list-style-type: none;
+    color: #1A1B22;
     display: flex;
     padding: 0;
     margin: 0;
@@ -29,6 +30,8 @@
 }
 
 .footer__nav-list-item {
+    text-decoration: none;
+    color: #1A1B22;
     margin-right: 40px;
     font-family: Roboto, Arial, sans-serif;
     font-style: normal;
