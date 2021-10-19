@@ -26,7 +26,7 @@ Functionalities:
 
 
 ## Tech
-React, React router, NodeJS, Express.js, MongoDB, GPC
+React, React router, NodeJS, Express.js, MongoDB, GCP
 
 ## Future improvements
  - Opening article, displaying full information on a new page
