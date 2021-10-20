@@ -10,7 +10,7 @@ News-Explorer is a search results page using 3rd party API to search for relevan
 Link to deployed [website](https://news-search.students.nomoreparties.site/)
 
 ## Description
-Aim: production of a MERN stack application using pull requests and review.
+Aim: production of a MERN stack application with pull requests and review.
 
 Functionalities:
 
