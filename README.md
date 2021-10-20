@@ -20,7 +20,7 @@ Functionalities:
 - Allows the user to sign up and authenticate if that email name is not taken
 - Clicking bookmark allows authorized users to save news articles to a personal profile or delete them. In personal profiles, the bookmark icon is substituted by the delete icon.
 - Clicking bookmark prompts unauthorized users to sign in
-- Personal profile page shows the most popular among saved articles 3 user's search keywords.
+- Personal profile page shows top 3 user's search keywords among saved articles.
 - Login and registration forms contain validation using hooks
 - App is fully responsive using a mobile-first approach.
 
