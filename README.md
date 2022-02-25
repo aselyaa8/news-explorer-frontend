@@ -30,8 +30,10 @@ React, React router, NodeJS, Express.js, MongoDB, GCP
 
 ## Future improvements
  - Opening article, displaying full information on a new page
+ - Improve state management. Having so many handlers from main App component will be challenging.
+ - Add unit tests
 - Default images and texts when problems occur
-- Use Typescript and refactor.
+- Use Typescript to improve developer experience.
 
 ## Available Scripts
 
