@@ -12,6 +12,10 @@ Link to deployed [website](https://news-search.students.nomoreparties.site/)
 ## Description
 Aim: production of a MERN stack application with pull requests and review.
 
+
+- App.js - is the starting point, where most of the functionalities are implemented.
+- Each component lives in its corresponding folder with its styling file
+
 Functionalities:
 
 - Separate API for managing users and saved articles [backend repo](https://github.com/aselyaa8/news-explorer-backend)
